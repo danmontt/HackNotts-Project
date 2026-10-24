@@ -68,5 +68,8 @@ Testing/
 .cache/
 
 list.d
-project.d
 HackNotts
+Project
+database.d
+project.d
+db/list.sl

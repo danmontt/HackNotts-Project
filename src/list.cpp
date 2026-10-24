@@ -22,8 +22,7 @@ void List::print_menu() {
         delete_from_list();
     }
     else if (choice == 4) {
-        cout << "Exiting program." << endl;
-        exit(0);
+        return; // Exit the menu
     }
     else {
         cout << "Invalid choice. Please try again." << endl;
