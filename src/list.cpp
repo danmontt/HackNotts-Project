@@ -74,6 +74,10 @@ void List::delete_from_list(){
         for(unsigned int i = 0; i < list.size(); i++){
             cout << i << ": " << list[i] << "\n";
         }
+        int choiceNum;
+        cin >> choiceNum;
+        list.erase(list.begin() + choiceNum);
+
     }
     else{
         cout << "The list is empty." << endl;
