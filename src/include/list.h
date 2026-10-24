@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "database.h"
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -13,14 +14,21 @@ public:
     ~List() {
         // Destructor
     }
+    Database data;
+    vector<vector<string>> mainList;
     vector<string> list;
     string name;
+    unsigned int currentUserIndex;
 
-    void print_menu();
+    void print_menu(); // Print the menu and handle user input
 
-    void print_list();
+    void print_list(); // Print the list to the console
 
-    void add_to_list();
+    void add_to_list(); // Add an item to the list
 
-    void delete_from_list();
+    void delete_from_list(); // Delete an item from the list
+
+    bool find_user_list();
+
+    void save_list();
 };
