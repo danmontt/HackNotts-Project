@@ -8,7 +8,8 @@ void List::print_menu() {
     cout << "2. Add to list" << endl;
     cout << "3. Delete from list" << endl;
     cout << "4. Save Database" << endl;
-    cout << "5. Exit" << endl;
+    cout << "4. Delete Database" << endl;
+    cout << "6. Exit" << endl;
     cout << "Enter your choice and press Enter: " << endl;
 
     cin >> choice; // Read the user's choice
@@ -26,6 +27,9 @@ void List::print_menu() {
         save_list(); // Exit the menu
     }
     else if (choice == 5) {
+        delete_whole_list();
+    }
+    else if (choice == 6) {
         return; // Exit the menu
     }
     else {
@@ -123,4 +127,32 @@ void List::save_list(){
     mainList[currentUserIndex] = list;
     data.write_to_file(mainList);
     print_menu();
+}
+
+int List::delete_whole_list(){
+    cout << "Are you sure you want to do this? \n";
+    char choice;
+    cin >> choice;
+
+    if(choice == 'Y' || choice == 'y') {
+        cout << "Enter Password: \n";
+        string password;
+        cin >> password;
+        if (password == "1234"){
+            cout << "Deleting the List...\n";
+            char filename[] = "db/list.sl";
+            int result = remove(filename);
+            cout << result;
+            print_menu();
+        }
+        else{
+            cout << "Invalid Password \n";
+            print_menu();
+        }
+    }
+    else if (choice == 'N' || choice == 'n'){
+        print_menu();
+    }
+
+  return 0;
 }
