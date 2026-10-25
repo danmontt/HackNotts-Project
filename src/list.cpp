@@ -8,7 +8,7 @@ void List::print_menu() {
     cout << "2. Add to list" << endl;
     cout << "3. Delete from list" << endl;
     cout << "4. Save Database" << endl;
-    cout << "4. Delete Database" << endl;
+    cout << "5. Delete Database" << endl;
     cout << "6. Exit" << endl;
     cout << "Enter your choice and press Enter: " << endl;
 
