@@ -97,35 +97,6 @@ void List::print_list() {
 
 bool List::find_user_list(){ // Print the list to the console
     bool userFound = false;
-    std::cout << R"(
-                       _.-**-._
-                    _,(        ),_
-                 .-"   '-^----'   "-.
-              .-'                    '-.
-            .'                          '.
-          .'    __.--**'""""""'**--.__    '.
-         /_.-*"'__.--**'""""""'**--.__'"*-._\
-        /_..-*"'   .-*"*-.  .-*"*-.   '"*-.._\
-       :          /       ;:       \          ;
-       :         :     *  !!  *     :         ;
-        \        '.     .'  '.     .'        /
-         \         '-.-'      '-.-'         /
-      .-*''.                              .'-.
-   .-'      '.                          .'    '.
-  :           '-.        _.._        .-'        '._
- ;"*-._          '-._  --___ `   _.-'        _.*'  '*.
-:      '.            `"*-.__.-*"`           (        :
- ;      ;                 *|                 '-.     ;
-  '---*'                   |                    ""--'
-   :                      *|                      :
-   '.                      |                     .'
-     '.._                 *|        ____----.._-'
-      \  """----_____------'-----"""         /
-       \  __..-------.._        ___..---._  /
-       :'"              '-..--''          "';
-        '""""""""""""""""' '"""""""""""""""'
-
-)" << '\n';
     cout << "*** Welcome " << name << "***\n";
 
     for (unsigned int user_index = 0; user_index < mainList.size(); user_index++){
@@ -150,5 +121,6 @@ bool List::find_user_list(){ // Print the list to the console
 void List::save_list(){
     cout << "Saving the List...\n";
     mainList[currentUserIndex] = list;
+    data.write_to_file(mainList);
     print_menu();
 }

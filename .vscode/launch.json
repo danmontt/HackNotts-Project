@@ -1,12 +1,12 @@
 {
     "configurations": [
-        
+
         {
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "enter program name, for example ${workspaceFolder}/a.out",
-            "args": [],
+            "program": "${workspaceFolder}/HackNotts",
+            "args": ["Danmontt"],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
